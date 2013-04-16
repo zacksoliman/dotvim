@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 " This is my vimrc file.
 
 set nocompatible
