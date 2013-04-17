@@ -3,11 +3,11 @@ execute pathogen#infect()
 " This is my vimrc file.
 set nocompatible
 
-" Enable syntax highlighting
+"Setup color scheme and syntax highlighting
 syntax on
-
-" Make syntax a bit more readable on dark bg
+set t_Co=16
 set background=dark
+colorscheme solarized
 
 " Setting tabs, automatically indent when adding a curly bracket, etc.
 set smartindent
