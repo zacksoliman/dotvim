@@ -5,9 +5,9 @@ set nocompatible
 
 "Setup color scheme and syntax highlighting
 syntax on
-set t_Co=16
+set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme jellybeans 
 
 " Setting tabs, automatically indent when adding a curly bracket, etc.
 set smartindent
