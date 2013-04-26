@@ -24,9 +24,11 @@ set ruler
 
 " Ignore case when searching
 set ignorecase
+let NERDTreeWinSize = 20 
 
 if has("autocmd")
 	  filetype plugin indent on
 endif
 
 autocmd vimenter * NERDTree
+
