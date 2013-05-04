@@ -1,4 +1,5 @@
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " This is my vimrc file.
 set nocompatible
@@ -26,9 +27,19 @@ set ruler
 set ignorecase
 let NERDTreeWinSize = 20 
 
-if has("autocmd")
-	  filetype plugin indent on
-endif
+" SuperTab
+
+let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 autocmd vimenter * NERDTree
+
+if has("autocmd")
+    autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+    autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+    filetype plugin indent on
+endif
+
 
